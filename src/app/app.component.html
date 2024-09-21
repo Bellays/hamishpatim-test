@@ -1,0 +1,35 @@
+<div>
+  <h1>אתר התרומות</h1>
+  <div>
+    <div>
+      <h2>רשימת תרומות</h2>
+      <ul class="ulDonation" *ngIf="donationService.donationsJSON.length > 0">
+        <li *ngFor="let donation of donationService.donationsJSON; let i = index">
+          <mat-card appearance="outlined">
+            <mat-card-content> {{donation.id}} - {{ donation.donor }} - {{ donation.amount }} ₪
+              <button (click)="donationService.editDonation(i)" mat-icon-button
+                aria-label="Example icon button with a vertical three dot icon" class="edit">
+                <mat-icon fontIcon="edit">more_vert</mat-icon>
+              </button>
+              <button (click)="donationService.deleteDonation(i)" mat-icon-button
+                aria-label="Example icon button with a vertical three dot icon" class="delete">
+                <mat-icon fontIcon="delete">more_vert</mat-icon>
+              </button>
+              <div *ngIf="donationService.isEdit && donationService.currentEdit==i" id="editPanel">
+                <app-add-donation></app-add-donation>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </li>
+      </ul>
+    </div>
+    <div id="addDonation">
+      <section>
+        <div class="btn btn-primary">
+          <button class="addDonation" (click)="showFunction()" mat-stroked-button>הוספת תרומה</button>
+        </div>
+      </section>
+      <div *ngIf="show"><app-add-donation (changeShowEvent)="onChildEvent($event)"></app-add-donation></div>
+    </div>
+  </div>
+</div>

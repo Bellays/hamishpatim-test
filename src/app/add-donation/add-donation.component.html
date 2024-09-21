@@ -1,0 +1,62 @@
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="donationForm" (ngSubmit)="onSubmit()">
+            <mat-form-field [style.fontSize]="fontSize.value">
+                <mat-label for="donor">שם היישות המדינית הזרה</mat-label>
+                <textarea class="form-control" id="donor" formControlName="donor" required matInput cdkTextareaAutosize
+                    #autosizeTextarea="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            </mat-form-field>
+            <mat-form-field [style.fontSize]="fontSize.value">
+                <mat-label for="amount">סכום התרומה בשח</mat-label>
+                <textarea class="form-control" id="amount" formControlName="amount" required matInput
+                    cdkTextareaAutosize #autosizeTextarea="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                    cdkAutosizeMaxRows="5"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="form-group">סוג הישות המדינית הזרה</mat-label>
+                <mat-select #fontSize value="16px" (selectionChange)="triggerResize()" required>
+                    <mat-option value="10px">סוג 1</mat-option>
+                    <mat-option value="12px">סוג 2</mat-option>
+                    <mat-option value="14px">סוג 3</mat-option>
+                </mat-select>
+            </mat-form-field><br>
+            <mat-form-field [style.fontSize]="fontSize.value" class="purpose">
+                <mat-label for="purpose">ייעוד התרומה</mat-label>
+                <textarea class="form-control" id="purpose" formControlName="purpose" required matInput cdkTextareaAutosize
+                    #autosizeTextarea="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            </mat-form-field> <br>
+            <mat-form-field [style.fontSize]="fontSize.value" class="purpose">
+                <mat-label for="conditions">התנאים לתרומה</mat-label>
+                <textarea class="form-control" id="conditions" formControlName="conditions" matInput cdkTextareaAutosize
+                    #autosizeTextarea="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            </mat-form-field> <br>
+            <mat-form-field>
+                <mat-label class="form-group">סוג המטבע</mat-label>
+                <mat-select #fontSize value="16px" (selectionChange)="triggerResize()" required>
+                    <mat-option value="10px">שקל חדש</mat-option>
+                    <mat-option value="12px">דולר</mat-option>
+                    <mat-option value="14px">יורו</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field [style.fontSize]="fontSize.value">
+                <mat-label for="exchangeRate">שער ההמרה</mat-label>
+                <textarea class="form-control" id="exchangeRate" formControlName="exchangeRate" required matInput cdkTextareaAutosize
+                    #autosizeTextarea="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            </mat-form-field>
+            <section>
+                <div class="btn btn-primary savwBtn">
+                    <button class="savwBtnAbled"  type="submit" *ngIf="donationForm.valid" mat-stroked-button>שמירה</button>
+                    <button class="savwBtnDisabled" *ngIf="!donationForm.valid" mat-stroked-button disabled>שמירה</button>
+                </div>
+            </section>
+            <mat-divider></mat-divider>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+

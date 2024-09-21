@@ -1,0 +1,42 @@
+[
+  {
+    "id":1,
+    "donor": "ישותא",
+    "amount": 1000000,
+    "donorType": "דולר",
+    "purpose": "Development",
+    "conditions": 45,
+    "currency": "EUR",
+    "exchangeRate": "aaaaa"
+  },
+  {
+    "id":2,
+    "donor": "ישותב",
+    "amount": 500000,
+    "donorType": "יורו",
+    "purpose": "Development",
+    "conditions": 45,
+    "currency": "EUR",
+    "exchangeRate": "aaaaa"
+  },
+  {
+    "id":3,
+    "donor": "ישותג",
+    "amount": 500000,
+    "donorType": "שקל חדש",
+    "purpose": "Development",
+    "conditions": 45,
+    "currency": "EUR",
+    "exchangeRate": "aaaaa"
+  },
+  {
+    "id":4,
+    "donor": "ישותד",
+    "amount": 500000,
+    "donorType": "יורו",
+    "purpose": "Development",
+    "conditions": 45,
+    "currency": "EUR",
+    "exchangeRate": "aaaaa"
+  }
+]

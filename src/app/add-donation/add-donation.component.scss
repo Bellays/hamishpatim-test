@@ -1,0 +1,43 @@
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  body{
+    direction: rtl;
+  }
+  mat-form-field{
+    padding: 1%;
+  }
+  .savwBtn{
+    margin-right: 60%;
+  }
+  .savwBtnAbled{
+    background-color: rgb(21, 110, 243);
+    border: 1 solid rgb(21, 110, 243);
+    border-radius: 40px;
+    width: 50%;
+    color: white;
+    cursor: pointer;
+  }
+  .savwBtnDisabled{
+    background-color: rgb(99, 103, 110);
+    border: 1 solid rgb(99, 103, 110);
+    border-radius: 40px;
+    width: 50%;
+    color: white;
+  }
+  form{
+    border: 2 solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: rgb(241, 241, 241);
+    width: 70%;
+    margin-right: -5%;
+    margin-top: 5vh;
+  }
+  .purpose{
+    width: 85%;
+  }

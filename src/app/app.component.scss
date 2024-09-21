@@ -1,0 +1,36 @@
+.edit{
+    float: left;
+}
+.delete{
+    float: left;
+    margin-bottom: 10vh;
+}
+.ulDonation{
+    width: 50%;
+    margin-right: 20%;
+}
+body{
+    text-align: center;
+}
+h1{
+    margin-right: 40%;
+}
+h2{
+    margin-right: 23%;
+}
+#editPanel{
+    padding-top: 3vh;
+    margin-right: 5%;
+}
+#addDonation{
+    margin-right: 25%;
+    
+}
+.addDonation{
+    background-color: rgb(21, 110, 243);
+    border: 1 solid rgb(21, 110, 243);
+    border-radius: 40px;
+    width: 20%;
+    color: white;
+    cursor: pointer;
+}
