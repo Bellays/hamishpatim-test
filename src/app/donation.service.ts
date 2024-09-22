@@ -32,6 +32,24 @@ export class DonationService {
         });
     }
 
+  editDonation( index: number) {
+        this.currentEdit = index;
+        console.log("1   ",this.currentEditedDonation);
+        this.currentEditedDonation=this.donationsJSON[index];
+        console.log("2   ",this.donationsJSON[index]);
+
+        if (this.isEdit == false) {
+            this.isEdit = true;
+        }
+        else {
+            this.isEdit = false;
+            this.currentEditedDonation=new Donation();
+        }
+        this.editingIndex = index; 
+    }
+
+  /////API TO SERVER
+
     getDonations() {
       console.log("5465465");
         const url = 'https://localhost:44353/api/Donation';
@@ -96,22 +114,6 @@ export class DonationService {
         }
         this.donationForm.reset();
 
-    }
-
-    editDonation( index: number) {
-        this.currentEdit = index;
-        console.log("1   ",this.currentEditedDonation);
-        this.currentEditedDonation=this.donationsJSON[index];
-        console.log("2   ",this.donationsJSON[index]);
-
-        if (this.isEdit == false) {
-            this.isEdit = true;
-        }
-        else {
-            this.isEdit = false;
-            this.currentEditedDonation=new Donation();
-        }
-        this.editingIndex = index; 
     }
 
     /////API TO JSON
